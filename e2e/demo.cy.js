@@ -1,7 +1,8 @@
 /// <reference types="Cypress" />
 
 describe('Cypress E2E Testing Demo', () => {
-  it('passes', () => {
-    cy.visit('https://example.cypress.io')
+  it('Assert Url', () => {
+    cy.visit('https://example.com')
+    cy.url().should('contain', 'example.com')
   })
 })
