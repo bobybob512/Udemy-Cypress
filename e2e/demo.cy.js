@@ -5,4 +5,9 @@ describe('Cypress E2E Testing Demo', () => {
     cy.visit('https://example.com')
     cy.url().should('contain', 'example.com')
   })
+
+  it('Assert title', () =>{
+    cy.visit('https://example.com')
+    cy.title().should('contain', 'Example Domain')
+  })
 })
