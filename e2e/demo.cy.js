@@ -10,4 +10,10 @@ describe('Cypress E2E Testing Demo', () => {
     cy.visit('https://example.com')
     cy.title().should('contain', 'Example Domain')
   })
+
+  it('Assert Elements', () =>{
+    cy.visit('https://example.com')
+    cy.get('h1').should('be.visible')
+    cy.get('p').should('be.visible')
+  })
 })
