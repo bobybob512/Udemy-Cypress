@@ -13,8 +13,6 @@ describe('Cypress E2E Testing Demo', () => {
     cy.url().should('contain', 'example.com')
   })
 
-
-  //BUG Ticket number 254
   it.skip('Assert title', () =>{
     cy.title().should('contain', 'Example Domain')
   })
