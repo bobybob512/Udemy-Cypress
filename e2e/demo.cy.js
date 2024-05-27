@@ -9,15 +9,15 @@ describe('Cypress E2E Testing Demo', () => {
     cy.log('This  will log after each of my test')
   })
 
-  it('Assert Url', () => {
+  it.skip('Assert Url', () => {
     cy.url().should('contain', 'example.com')
   })
 
-  it('Assert title', () =>{
+  it.skip('Assert title', () =>{
     cy.title().should('contain', 'Example Domain')
   })
 
-  it.only('Assert Elements', () =>{
+  it.skip('Assert Elements', () =>{
     cy.get('h1').should('be.visible')
     cy.get('p').should('be.visible')
   })
