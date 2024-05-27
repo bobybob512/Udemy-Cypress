@@ -16,4 +16,11 @@ describe('Cypress E2E Testing Demo', () => {
     cy.get('h1').should('be.visible')
     cy.get('p').should('be.visible')
   })
+
+  it('Reloads and Logs', () =>{
+    cy.visit('https://example.com')
+    cy.log('Before Reload')
+    cy.reload()
+    cy.log('After Reload')
+  })
 })
