@@ -9,15 +9,17 @@ describe('Cypress E2E Testing Demo', () => {
     cy.log('This  will log after each of my test')
   })
 
-  it.skip('Assert Url', () => {
+  it('Assert Url', () => {
     cy.url().should('contain', 'example.com')
   })
 
+
+  //BUG Ticket number 254
   it.skip('Assert title', () =>{
     cy.title().should('contain', 'Example Domain')
   })
 
-  it.skip('Assert Elements', () =>{
+  it('Assert Elements', () =>{
     cy.get('h1').should('be.visible')
     cy.get('p').should('be.visible')
   })
