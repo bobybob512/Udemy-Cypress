@@ -13,5 +13,13 @@ describe('forms, buttond and checkboxes', () => {
     cy.get('#email').type('email@mail.com')
     cy.get('#message').type('This is a message')
     cy.contains('Submit').click()
+    cy.wait(2000)
+
+    //Assert Form Details
+    cy.on('window:alert', (alertText) => {
+      expect(alertText).to.equal('Message received!!');
+      cy.wait(2000)
+      cy.get('#alertButton').click();
+    });
   })
 })
