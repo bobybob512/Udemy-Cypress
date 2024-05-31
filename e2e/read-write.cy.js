@@ -7,4 +7,8 @@ describe('Cypress files', () => {
       expect(Whatever.email).to.equal('bob@mail.com')
     })
   })
+
+  it('Write into plain text file', () =>{
+    cy.writeFile('test-data/plain.txt', 'Hello World', 'ascii')
+  })
 })
