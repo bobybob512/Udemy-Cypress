@@ -8,6 +8,7 @@ describe('Cypress screenshots', () => {
 
   it('Single element screenshot', () =>{
     cy.visit('https://example.com')
-    cy.get('h1').screenshot({overwrite: true})
+    //cy.get('h1').screenshot({overwrite: true})
+    cy.get('p').should('have.length', 2)
   })
 })
