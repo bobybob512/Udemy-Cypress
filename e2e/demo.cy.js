@@ -13,16 +13,10 @@ describe('Cypress E2E Testing Demo', () => {
     cy.log('This  will log after each of my test')
   })
 
-  it('Assert Url', () => {
+  it('Assert Url and Title', () => {
     //cy.url().should('contain', 'example.com')
     const examplePage = new ExamplePage()
     examplePage.assertURL()
-  })
-
-  //BUG Ticket Number 223
-  it('Assert title', () =>{
-    //cy.title().should('contain', 'Example Domain')
-    const examplePage = new ExamplePage()
     examplePage.assertTitle()
   })
 
