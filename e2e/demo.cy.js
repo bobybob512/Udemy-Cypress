@@ -4,7 +4,6 @@ import ExamplePage from '../pages/ExamplePage'
 
 describe('Cypress E2E Testing Demo', () => {
   beforeEach(() =>{
-    //cy.visit('https://example.com')
     const examplePage = new ExamplePage()
     examplePage.openExamplePage()
   })
@@ -14,7 +13,6 @@ describe('Cypress E2E Testing Demo', () => {
   })
 
   it('Assert Url and Title', () => {
-    //cy.url().should('contain', 'example.com')
     const examplePage = new ExamplePage()
     examplePage.assertURL()
     examplePage.assertTitle()
