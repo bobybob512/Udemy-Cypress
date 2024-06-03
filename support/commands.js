@@ -23,3 +23,11 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('getById', (whateverSelector) =>{
+    return cy.get(`#${whateverSelector}`)
+})
+
+Cypress.Commands.add('getByClass', (whateverSelector) =>{
+    return cy.get(`.${whateverSelector}`)
+})

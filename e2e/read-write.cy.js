@@ -10,5 +10,6 @@ describe('Cypress files', () => {
 
   it('Write into plain text file', () =>{
     cy.writeFile('test-data/plain.txt', 'Hello World', 'ascii')
+    cy.console.log('Hy');
   })
 })
