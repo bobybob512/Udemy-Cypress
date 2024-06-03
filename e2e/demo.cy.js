@@ -14,7 +14,9 @@ describe('Cypress E2E Testing Demo', () => {
   })
 
   it('Assert Url', () => {
-    cy.url().should('contain', 'example.com')
+    //cy.url().should('contain', 'example.com')
+    const examplePage = new ExamplePage()
+    examplePage.assertURL()
   })
 
   //BUG Ticket Number 223
