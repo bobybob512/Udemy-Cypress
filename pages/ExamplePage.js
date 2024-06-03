@@ -6,6 +6,10 @@ class ExamplePage {
     assertURL() {
         cy.url().should('contain', 'example.com')
     }
+
+    assertTitle() {
+        cy.title().should('contain', 'Example Domain')
+    }
 }
 
 export default ExamplePage

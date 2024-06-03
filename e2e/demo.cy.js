@@ -21,7 +21,9 @@ describe('Cypress E2E Testing Demo', () => {
 
   //BUG Ticket Number 223
   it('Assert title', () =>{
-    cy.title().should('contain', 'Example Domain')
+    //cy.title().should('contain', 'Example Domain')
+    const examplePage = new ExamplePage()
+    examplePage.assertTitle()
   })
 
   it('Assert Elements', () =>{
