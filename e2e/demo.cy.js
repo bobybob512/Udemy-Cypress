@@ -1,5 +1,7 @@
 /// <reference types="Cypress" />
 
+import ExamplePage from '../pages/ExamplePage'
+
 describe('Cypress E2E Testing Demo', () => {
   beforeEach(() =>{
     cy.visit('https://example.com')
