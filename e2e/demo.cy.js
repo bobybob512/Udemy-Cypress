@@ -4,7 +4,9 @@ import ExamplePage from '../pages/ExamplePage'
 
 describe('Cypress E2E Testing Demo', () => {
   beforeEach(() =>{
-    cy.visit('https://example.com')
+    //cy.visit('https://example.com')
+    const examplePage = new ExamplePage()
+    examplePage.openExamplePage()
   })
 
   afterEach(() =>{
@@ -16,7 +18,7 @@ describe('Cypress E2E Testing Demo', () => {
   })
 
   //BUG Ticket Number 223
-  it.skip('Assert title', () =>{
+  it('Assert title', () =>{
     cy.title().should('contain', 'Example Domain')
   })
 
