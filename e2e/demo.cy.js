@@ -18,8 +18,10 @@ describe('Cypress E2E Testing Demo', () => {
     examplePage.assertTitle()
   })
 
-  it('Assert Elements', () =>{
-    cy.get('h1').should('be.visible')
+  //the retries will be executed only if the test fails
+  it.only('Assert Elements', {retries: 3}, () =>{
+    cy.get('h1').should('not.be.visible')
+    //cy.get('h1').should('be.visible')
     cy.get('p').should('be.visible')
   })
 
